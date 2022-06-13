@@ -14,9 +14,20 @@ public class DateTomorrow {
             print tomorrow's date in this format:
                Tomorrow's Date: month \ day \ year
 
-
          */
 
+        int month, day, year; // made 3 variables, all of them are int type
+        month = 6;
+        day = 13;
+        year = 2022;
+
+        //  alternative declaration and assignment: int month = 6, day = 13, year = 2022;
+
+        System.out.println("Date: " + month + " \\ " + day + " \\ " + year);
+
+        // Show date for tomorrow
+        day = 14;
+        System.out.println("Tomorrow's Date: " + month + " \\ " + day + " \\ " + year);
 
     }
 }
