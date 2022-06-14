@@ -24,7 +24,6 @@ declare and assign all these variables:
         System.out.println(numberOfSchoolDays);
         System.out.println(numberOfSnowDays);
 
-
     }
 
 }
