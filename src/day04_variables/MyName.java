@@ -22,7 +22,6 @@ public class MyName {
 
         System.out.println("my name is " + first + second + third + fourth); // concatenate a String in the beginning, this will concatenate all the chars together
 
-        come back 12:13 est
     }
 
 }
