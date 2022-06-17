@@ -16,7 +16,7 @@ public class CastingRecap {
         System.out.println(i);
         double d = f; // float going to double
         System.out.println(d);
-        double d2 = i; // int doing to double
+        double d2 = i; // int going to double
         System.out.println(d2);
 
 
