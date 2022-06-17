@@ -18,6 +18,9 @@ public class RelationalExamples {
         System.out.println(4 != 20);
         System.out.println(20 != 20);
 
+        System.out.println(true == true);
+
+        System.out.println('a' == 'A');
 
     }
 }
