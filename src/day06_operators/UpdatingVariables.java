@@ -17,6 +17,7 @@ public class UpdatingVariables {
 
         int z = 10;
         z++;
+        System.out.println(z);
         /*
          updating a number by 1:
                z = 11;
@@ -28,6 +29,21 @@ public class UpdatingVariables {
                z++; or ++z
 
         */
+        System.out.println();
+
+        int java = 8;
+        int testing = --java; // pre decrement
+
+        System.out.println(java); // 8 --> 7
+        System.out.println(testing); // 7
+
+        System.out.println();
+        int x = 7;
+        int y = x--; // post decrement
+
+        System.out.println(x); // 7 -> 6
+        System.out.println(y); // 7
+
 
     }
 }
