@@ -11,12 +11,12 @@ public class CastingRecap {
 
         long boxes = 3000000000L;
 
-        float f = 14.5F;
+        float f = 14.5F; // added F to make the number a float
         int i = (int)f;
         System.out.println(i);
-        double d = f;
+        double d = f; // float going to double
         System.out.println(d);
-        double d2 = i;
+        double d2 = i; // int doing to double
         System.out.println(d2);
 
 
