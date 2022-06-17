@@ -39,6 +39,8 @@ public class RelationalTasks {
         int num = 5;
         boolean isEven = num % 2 == 0;
         boolean isOdd = num % 2 != 0; // num % 2 == 1 // isEven != true
+        System.out.println("isEven = " + isEven);
+        System.out.println("isOdd = " + isOdd);
 
     }
 }
