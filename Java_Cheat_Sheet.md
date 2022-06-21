@@ -290,7 +290,7 @@ Primitive datatypes:
 ```
   && and --> both boolean statements must be true for an and expression to be true
   || or --> at least one boolean statement must be true for the expression to be true
-  ! not --> used to check the oppisite value of a boolean
+  ! not --> used to check the opposite value of a boolean
   
   short circuit: 2 operators form (&& ||) is more efficient in execution. 
   If the result of the logical operators is known the remain code on a line does not need to be executed
