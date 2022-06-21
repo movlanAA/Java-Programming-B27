@@ -3,7 +3,7 @@
 
 ---
 ### This document will highlight the main points of the topics we cover.
-#### Last updated: 06/15/2022
+#### Last updated: 06/21/2022
 
 ---
 
@@ -175,7 +175,147 @@ Primitive datatypes:
       String a = "hello"
       System.out.println(5 + a + 10); -> results in 5hello10
   ```
+
+#### Primitive type casting: Converting from one primitive datatypes to another 
+
+  > Order from the smallest type to the biggest type: byte -> short -> int -> long -> float -> double
+
+  - Widening Convention is when you go from a smaller datatype to a bigger datatype. This direction is done automatically and does not require anything
+    ```
+    Ex:
+      int i = 5;
+      double d = i;
+    ```
+  - Narrowing Convention is when you go from a bigger datatype to a smaller datatype. This direction require manually casting the types to the smaller type. Casting is done with the smaller datatype in parentheses
+  
+> General syntax for casting: 
+  >>smallerType varName = (smallerType) biggerType
+
+```
+    Ex:
+      double a = 9.99;
+      int b = (int)a;
+``` 
+
+  - Casting from a bigger datatype to a smaller datatypes has the possibility for data loss. If a datatype cannot hold the value being assigned to it, there will be a calculation run for represent how much data was lost. When casting floating number to whole numbers the floating numbers are also lost. No rounding happens
+
 ---
+
+### Operators
+
+#### Arithmetic Operators
+  Operators used to perform arithmetic calculations
+  ``` 
+	+ addition
+	- subtraction
+	* multiplication
+	/ division
+	% remainder/modulus
+  ```
+- Arithmetic operations between two different datatypes result in the biggest datatype between the two
+
+- When you do arithmetic operations with short or byte the values are changed to int for the calculation, so the result of the operation is int
+
+#### Shorthand operators:
+  Shorter syntax to use the arithmetic operators and update the value of the variable without having to manually reassign
+
+  ``` 
+    +=
+    -=
+    *=
+    /=
+    %=
+  ```
+```
+
+  Ex:
+    normal use:
+    
+      int a = 10;
+      a = a + 4; // a would have a value of 14 because the original value of a is taken, 4 is added to it, and then the result is reassign back into the variable
+      
+    shorthand use:
+    
+      int b = 6;
+      b += 6; // b would have a value of 12 after this line because 6 is added to the original value of the variable and that result is automatically stored into the variable. The variable updates
+
+```
+
+#### Unary operators:
+
+  ```
+    +       (plus) positive number
+    -       (minus) negative number
+    ++      incrementing, adding 1
+    --      decrementing, subtracting 1
+    
+    Pre and Post operations:
+    
+        Given int num = 0;
+
+        pre-increment: increments the value before it is used in the expression
+                ++num
+
+        pre-decrement: decrements the value before it is used in the expression
+                --num
+
+        post-increment: increments the value after it is used in the expression
+                num++
+
+        post-decrement: decrements the value after it is used in the expression
+                num--
+
+    **** We will primarily use post incrementing and we will not need to worry about the post functionality of it
+
+  ```
+
+#### Relational Operators
+  used to compare values. The result is a boolean value
+```
+  > greater than
+  >= greater than or equal to
+  < less than
+  <= less than or equal to
+  == equals: checks if two values are the same
+  != not equals: checks if two values are not the same
+```
+> Q: What is the difference between `=` and `==`
+  >> we use the `=` as the assignment operator
+> 
+  >>we use the `==` to compare the values to check if they are equal
+
+#### Logical Operators
+  used to compare booleans. The result of a boolean value
+
+```
+  && and --> both boolean statements must be true for an and expression to be true
+  || or --> at least one boolean statement must be true for the expression to be true
+  ! not --> used to check the oppisite value of a boolean
+  
+  short circuit: 2 operators form (&& ||) is more efficient in execution. 
+  If the result of the logical operators is known the remain code on a line does not need to be executed
+```
+
+#### Overall precedence of operators
+```
+  Execution goes top to bottom. Left to right. Each operator in the same line is same priority so it executed left to right.
+  
+    ! + - ++ -- 
+    * / %
+    + -
+    < > <= >= 
+    == !=
+    &&
+    ||
+    = += -= *= /= %=
+```
+
+---
+
+### Scanner: WIP
+
+
+
 
 
 
