@@ -4,7 +4,7 @@ public class Letters {
 
     public static void main(String[] args) {
 
-        char letter = '#';
+        char letter = 'f';
 
         if(letter >= 'A' && letter <= 'Z'){
             System.out.println(letter + " is an uppercase letter");
