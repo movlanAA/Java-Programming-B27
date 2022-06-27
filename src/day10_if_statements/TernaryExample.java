@@ -50,6 +50,5 @@ public class TernaryExample {
         int num = 10;
         System.out.println(num > 0 ? "Positive" : num < 0 ? "Negative" : "Zero");
 
-
     }
 }
