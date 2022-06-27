@@ -24,6 +24,5 @@ hint: use separate if statements
             System.out.println("Not in 24h range");
         }
 
-
     }
 }
