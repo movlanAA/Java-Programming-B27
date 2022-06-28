@@ -16,7 +16,7 @@ declare and assign a int variable about the oxygen level in the tank and print a
      */
     public static void main(String[] args) {
 
-        int tank = 53;
+        int tank = 80;
         String message = "";
 
         if(tank > 90){
