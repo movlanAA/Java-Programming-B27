@@ -22,7 +22,7 @@ Write a program that will read a number from the user. This number will be a yea
      */
 
     public static void main(String[] args) {
-        //TODO: complete the ranges
+
         Scanner input = new Scanner(System.in);
         System.out.println("What year would you like to check?");
         int year = input.nextInt();
