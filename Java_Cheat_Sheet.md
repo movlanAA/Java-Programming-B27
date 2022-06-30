@@ -3,7 +3,16 @@
 
 ---
 ### This document will highlight the main points of the topics we cover.
-#### Last updated: 06/21/2022
+#### Last updated: 06/30/2022
+
+---
+## Shortcuts
+```
+reformat code:
+	mac: option + command + l
+	windows: control + alt + l
+
+```
 
 ---
 
@@ -312,7 +321,131 @@ Primitive datatypes:
 
 ---
 
-### Scanner: WIP
+### Scanner
+
+`Scanner` is a class that has methods to allow inputs of information from different sources. We will use the `Scanner` methods to type in the console to create some dynamic programs. In the future the dynamic aspect will come from testing applications
+
+> We will learn what classes and methods are in more details in the future
+
+1) To use `Scanner` we need to `import` the class
+   > Importing allows a file to be used outside the package it was created in. We need to import the Scanner class to use it
+
+   > We will learn importing better in the future as well
+
+Add the import line between the `package` and the `class`
+```java
+import java.util.Scanner;
+```
+
+2) Create a `Scanner` object
+  > creating an object will allow us to use the methods(code) that is already written to type in the console
+```
+ Syntax:
+    Scanner input = new Scanner(System.in);
+```
+  - instead of `input` its possible to use any name, because it is just a name for the object. Common names are scan, keyboard, scanner, in
+
+> the name of the object is better known as the reference, but that is something we will learn more about later
+
+3) Use the `Scanner` methods
+  to use the methods we need to call them from the object:
+```
+scannerObj.method();
+
+Scanner methods:
+  nextByte()
+  nextShort()
+  nextInt()
+  nextLong()
+  nextFloat()
+  nextDouble()
+  nextBoolean()
+  next(): returns a String, but only accepts one word
+  nextLine(): returns a String, and can allow multiple words, but also accept the enter input
+```
+> Known issue with nextLine():
+> 
+> Since the nextLine() method accepts the enter inputs it can cause issues whenever trying to use it with the other Scanner methods. Whenever a different Scanner method, besides nextLine() is used before the nextLine call there is a problem because when typing in the console the enter key is used to submit the info and continue the program to the next line, but that enter input is also finishing the nextLine call without allowing you to type any for that call.
+> 
+> The fix is to add an extra nextLine() call between the two Scanner methods 
+
+---
+
+# Conditional Statements
+
+### If statements: Allow you to control how the program will be executed based on boolean expressions
+  Types of is statements:
+  - `single if`: boolean expression is checked. If the boolean is true the if block will be executed, but if the boolean is false the code will resume execution after the if statement
+    
+  > has one boolean expression 
+
+    ```
+    if(boolean_expression){
+    
+    }
+    ```
+  - `if else`: boolean expression is checked. If the boolean is true the if block will be executed, but if the boolean is false the else block will be executed
+
+  > has one boolean expression
+
+    ```
+    if(boolean_expression){
+    
+    } else {
+    
+    }
+    ```
+  - `multi branch`: boolean expression is checked. If the boolean is true the if block will be executed, but if the boolean is false the next boolean expression is checked and so on. Whenever a boolean is true that related block of code is executed
+
+  > has multiple boolean expressions
+
+    ```
+    if(boolean_expression){
+    
+    } else if(boolean_expression){
+    
+    } else {
+    
+    }
+    ```
+  - `nested if`: if statement that is defined in another if statement.
+
+    ```
+    if(boolean_expression){
+    
+        if(boolean_expression){
+    
+        }
+    
+    } else {
+    
+    }
+    ```
+
+Note: If statements can be declared without any curly brackets. If they are the first line after the statement is the block related to the if statement, but it is not readable and cannot work when there is multiple lines that belong to one block, so in general you should always use brackets
+
+### Ternary 
+  alternative way to write `if` statements
+
+  syntax:
+> returnValue = boolean_expression ? trueValue : falseValue
+
+  The `?` is treated as `if`
+
+  The `:` is treated as `else`
+
+  ```
+  Example:
+    
+    String s = 2 > 5 ? "Two" : "Five";
+  ```
+---
+
+### Switch: WIP
+
+
+
+
 
 
 
