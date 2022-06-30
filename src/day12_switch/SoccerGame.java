@@ -51,6 +51,8 @@ use these ranges to determine the outputs:
                 System.out.println("games cannot be longer than 90 minutes");
             }
 
+            // System.out.println(minutes < 0 ? "minutes cannot be a negative number" : "games cannot be longer than 90 minutes");
+
         }
 
 
