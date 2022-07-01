@@ -15,7 +15,7 @@ data:
      */
     public static void main(String[] args) {
 
-        String month = "February";
+        String month = "February"; // next();
 
         switch (month) {
 
@@ -39,7 +39,7 @@ data:
                 break;
             default:
                 System.out.println("Invalid month");
-        }
+        } // come back 11: 10 est
 
     }
 }
