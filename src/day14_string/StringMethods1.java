@@ -52,9 +52,21 @@ public class StringMethods1 {
         String sentence = "hello My NAME is";
         System.out.println(sentence.toLowerCase()); // make a new String that was all lowercase, and then printed it
         System.out.println(sentence); // print the original String, because String is immutable it cannot change
-        String lowerVer = sentence.toLowerCase();
+        String lowerVer = sentence.toLowerCase(); // the new object from the method is stored into the new variable
+        System.out.println(lowerVer);
         // option3: reassign
         // sentence = sentence.toLowerCase();
+        System.out.println("------------------------------------");
+
+        String s = "       java      ";
+        System.out.println(s);
+        System.out.println(s.length());
+        s = s.trim(); // trim() method gets rid of all the extra spaces in the beginning and end of a String
+        System.out.println(s);
+        System.out.println(s.length());
+
+        String s2 = "  multiple   words   here    ";
+        System.out.println(s2.trim()); // trim() will remove from beginning and end, middle spaces will not be touched
 
     }
 }
