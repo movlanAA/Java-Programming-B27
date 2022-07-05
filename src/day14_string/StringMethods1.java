@@ -39,7 +39,7 @@ public class StringMethods1 {
         System.out.println(str);
 
         System.out.println("------------------------------------");
-        String word = "Summer";
+        String word = "Summer"; // 'word' is the reference/name and "Summer" is the value of the String object
         word.toUpperCase(); // the uppercase method makes all the character uppercase, but we didn't do anything with this value
         // nextInt();
         System.out.println(word);
@@ -47,11 +47,14 @@ public class StringMethods1 {
         System.out.println(word);
         System.out.println(word);
 
+        System.out.println("------------------------------------");
 
-
-
-
-
+        String sentence = "hello My NAME is";
+        System.out.println(sentence.toLowerCase()); // make a new String that was all lowercase, and then printed it
+        System.out.println(sentence); // print the original String, because String is immutable it cannot change
+        String lowerVer = sentence.toLowerCase();
+        // option3: reassign
+        // sentence = sentence.toLowerCase();
 
     }
 }
