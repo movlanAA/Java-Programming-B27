@@ -31,7 +31,8 @@ public class StringMethods2 {
         System.out.println("str.contains(it is)) "+ str.contains("it is"));
         System.out.println("str.contains(degrees)) "+ str.contains("degrees"));
         System.out.println("str.contains(it 80)) exact sequence "+ str.contains("it 80")); // contains(it) && contains(80)
-        System.out.println(str.contains("80") && str.contains("today"));
+        System.out.println("(str.contains(80) && str.contains(today))+ " + (str.contains("80") && str.contains("today")));
+        System.out.println("str.contains(day)) " + str.contains("day"));
 
     }
 }
