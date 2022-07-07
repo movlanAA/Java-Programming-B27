@@ -43,6 +43,8 @@ public class ValidWebsite {
 
         }
 
+        System.out.println("---------------");
+        System.out.println(validStart && validEnd ? "Valid website" : "Invalid website");
 
 
     }
