@@ -68,6 +68,8 @@ at the end also print the address as all uppercase letters
 
          */
 
+        System.out.println(address);
+
         if(address.startsWith("500")){
             System.out.println("House is on the right side");
         } else if(address.startsWith("600")){
