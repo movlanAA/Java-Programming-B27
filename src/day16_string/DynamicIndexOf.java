@@ -3,7 +3,7 @@ package day16_string;
 public class DynamicIndexOf {
     public static void main(String[] args) {
 
-        String str = "mississippi";
+        String str = "definition";
         //            012345678910
         // goal is to find all the indexes of all the 'i' characters
 
@@ -25,6 +25,8 @@ public class DynamicIndexOf {
         System.out.println("First i: " + firstI);
         System.out.println("Second i: " + secondI);
         System.out.println("Third i: " + thirdI);
+
+
 
     }
 }
