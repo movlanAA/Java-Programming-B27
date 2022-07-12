@@ -12,7 +12,7 @@ public class Bot {
         while(run){
 
             System.out.println("Enter your message");
-            String msg = input.nextLine();
+            String msg = input.nextLine().toLowerCase();
 
             switch (msg){
                 case "hello":
