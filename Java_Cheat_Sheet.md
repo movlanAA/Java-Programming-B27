@@ -3,7 +3,7 @@
 
 ---
 ### This document will highlight the main points of the topics we cover.
-#### Last updated: 06/30/2022
+#### Last updated: 07/12/2022
 
 ---
 ## Shortcuts
@@ -441,7 +441,127 @@ Note: If statements can be declared without any curly brackets. If they are the 
   ```
 ---
 
-### Switch: WIP
+### Switch:
+> A conditional statement that is useful when the possible values are known. Only useful for comparing exact values
+>
+> One of the key component of the switch in comparison to `if statements` is how execution of a switch is handled.
+> Not all "conditions" or in this case "cases" are checked like they would be in an if statement. When the switch gets a value it will immateriality jump to the case and begin execution from that point top to bottom until the end of the switch or a `break` keyword.
+
+```
+    syntax:
+    
+	switch(input value){
+		case x:
+		   // statements
+		   break;
+	}       
+```
+
+#### Keywords for switch:
+   - `case`: used to define the exact value that is being checked for and define the code that should be executed when the case is matched
+        - valid input value types: byte, short, int String, char
+        - NOT valid types: double, float, boolean
+    
+   - `default`: the case that is executed if no other case is matched. Acts similar to an else block in an if statement. The default is optional, if a switch doesn't have a default and the value given is not defined as a case nothing is executed. The default case can be anywhere in the switch. The order of the cases does not matter for matching
+
+   - `break`: stops the switch statement execution
+
+#### Benefit of switch statements: readable, easy to maintain, generally quicker execution compared to a multibranch if statement
+
+---
+#### If statement vs Switch vs Ternary
+	In most cases you will use if statements
+	any switch or ternary can always be converted to an if statement
+	If statements allow more flexibility by using single if, if else, multi branch, or nested 
+
+	Switch is useful to compare the exact value, so it is a good choice when all the possible values are known (they will be the cases)
+	Downsides: only compare values, no boolean logic, and the datatypes that can be compared are a little restrictive
+
+	Ternary useful sometimes to make a quick single if statement in one line
+	Can only be used when a value is returned, and you need to at least define two possible outputs
+
+---
+
+## String
+
+- `String` is a class located in the `java.lang` `package`
+   - the `java.lang` `package` is automatically imported because it has classes/files that are used regularly in java code
+
+- `String` are `immutable`, which means after the object is created it cannot be changed
+
+- Strings can be created in two ways:
+  - `literal`: using double quotations | **The way we will usually create Strings**
+    ```
+        String s = "java";
+    ```
+    > String literals are created in the String pool which is a special memory location to handle the commonly used datatype. The String pool is located in the `heap`
+  - using `new` keyword -- **we will talk about object creation more in the future**
+    ```
+        String s = new String("java")
+    ```
+    > objects created using `new` are created directly in the `heap` memory where all objects are created
+    
+Note: Do not use `==` to compare Strings. Strings are objects so the `==` compares the objects not the values
+
+- Every character in a String has an `index`. Indexes start from 0. Indexes can be helpful with some methods to get certain characters. Whenever an index is used that does not exist the program will stop with : `StringIndexOutOfBoundsException`
+
+#### String methods: methods are used to do some action with String objects. Use a method by calling the String `object.method()`
+
+Return boolean
+```
+equals(): checks if two objects have the same characters. Does check for case sensitivity
+
+equalsIgnoreCase(): checks if two objects have the same characters, but it will ignore the case sensitivity
+
+startsWith(str): checks if the String object starts with the characters defined in the parenthesis
+
+endsWith(str): checks if the String object ends with the characters defined in the parenthesis
+
+contains(str): checks if the String object has the given characters defined in the parenthesis anywhere in the String
+
+isEmpty(): checks if the String has no characters
+
+isBlank(): checks if the String has only white space characters and no other characters
+```
+Return String
+```
+toUpperCase(): converts the characters all to uppercase
+
+toLowerCase(): converts the character all to lowercase
+
+trim(): removes any spaces from the beginning and end of the String
+
+substring(): returns part of the String
+    (int): the String returned will start from the index that was given in the parenthesis and keep every character until the end of the String
+    (int, int): the String returned will start from the given index in the parenthesis and will include all the character up to the second given index number. Not including that ending index
+    
+replace(): allows you to modify/change a certain character/s to another given character/s. Replaces all of the occurrences of the character in the String    
+    (char, char) first give the char you want change, second one is the char you are changing to   
+    (String, String) first give the String you want change, second one is the String you are changing to   
+    
+replaceFirst(): replaces the first instance of the given String
+    only works with Strings in the parenthesis     			
+```
+Return int
+```
+length(): checks how many characters are in the String
+
+indexOf(): return an int(index) where the given character/s is located in the String. 
+    If the character does not exist in the String -1 is returned
+    (char): give a char in the parenthesis and it returns the index where that character is found. Only return the first occurrence of the character
+    (String): give a String in the parenthesis it will look for that sequence of characters in the String and if its find that sequence it will return the index of the first character in the sequence
+    (char/String, int):  give a String or a char, the value you are searching the index of, then you give a number which is the starting point to search from(starting point)
+    
+lastIndexOf(): returns an int(index) of the given parenthesis value, but the first occurrence of the value from the end of the String    
+```
+Return char
+```
+charAt(int): returns the character at the given index number from the parenthesis
+```
+
+Note: There is more methods that exist, we can not learn every single method created, there is many files, classes, libraries we will use that all have so many useful method. We need to get an idea of some common functions of Strings for now. For the full list of String methods check the oracle documentation: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html
+
+---
 
 
 
@@ -449,6 +569,4 @@ Note: If statements can be declared without any curly brackets. If they are the 
 
 
 
-
-
-
+       
