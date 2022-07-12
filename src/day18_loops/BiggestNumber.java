@@ -90,6 +90,16 @@ public class BiggestNumber {
                 if(inputNum > max) 40 > 100 --> false
 
                 if(inputNum < min){ 40 < 10 -> false
+             iteration 5:
+                int max = 100
+                int min = 10
+                int num = 4;
+
+                 while(num++ < 5){ 4 < 5 -> true ---> num = 5
+
+
+                 .. after
+                  while(num++ < 5){ 5 < 5 -> false -> loop stops
 
          */
 
