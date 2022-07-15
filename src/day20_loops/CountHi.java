@@ -57,3 +57,14 @@ public class CountHi {
     }
 
 }
+
+/*
+these check the same value:
+
+ if(s3.substring(i, i + 2).equals("hi")){
+
+ if(s3.substring(i).startsWith("hi")
+
+ if(startsWith("hi", i) same as above but using different startsWith version
+
+ */
