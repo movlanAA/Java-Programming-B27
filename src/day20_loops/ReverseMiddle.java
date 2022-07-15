@@ -46,7 +46,7 @@ take a look at, alternative to reverse middle
       String reverse = "";
 
       for(int i = str.lastIndexOf(' ') - 1; i > str.indexOf(' '); i--){
-        reverse += str.charAt(i);
+        reverse += str.charAt(i); // reverse = reverse + str.charAt(i)
       }
 
  */
