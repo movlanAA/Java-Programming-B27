@@ -28,10 +28,10 @@ public class Prime {
 
         if(n < 2){
             System.out.println("Not Prime");
-            System.exit(0);
+            System.exit(0); // stop the program
         }
 
-        for(int i = 2; i < n; i++){
+        for(int i = 2; i < n; i++){ // start from 2 because we don't check divisibility of 0 or 1 and we want to check until the number which is done with i < n
 
             if(n % i == 0){
                 isPrime = false;
@@ -48,5 +48,7 @@ public class Prime {
        11 % 2
        11 % 3
        11 % 4
+       ..
+       11
 
  */
