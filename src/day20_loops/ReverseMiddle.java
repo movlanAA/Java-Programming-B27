@@ -33,8 +33,6 @@ public class ReverseMiddle {
 
         //str.replace(middleWord, reverseWord) another option instead of line 26
 
-
-
     }
 }
 
