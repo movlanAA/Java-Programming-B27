@@ -26,7 +26,6 @@ public class UniqueCharacter {
                 if(str.charAt(i) == str.charAt(j)){
                     count++;
                 }
-
             }
 
             if(count == 1){ // if the counter is 1 the character was only found one time, the character only matched itself
