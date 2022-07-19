@@ -28,6 +28,5 @@ public class Cities {
         System.out.println(cities); // no readable, hash
         System.out.println(Arrays.toString(cities)); //Arrays.toString(cities); --> return your array object as in a String format
 
-
     }
 }
