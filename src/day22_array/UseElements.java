@@ -19,6 +19,7 @@ public class UseElements {
         System.out.println(strs[1].charAt(strs[1].length() -1)); // last index of the element at index 1
 
         String s = strs[3]; // assigning the value of the 3rd index of the array in to a new String variable s
+        System.out.println(s);
 
     }
 }
