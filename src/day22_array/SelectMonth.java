@@ -30,5 +30,8 @@ public class SelectMonth {
             System.out.println("Invalid month number. Should be 1-12");
         }
 
+        // 3 --> March --> months[2]   --> 3 - 1 --> 2
+        // 11 --> November -> months[10] --> 11 - 1 -> 10
+
     }
 }
