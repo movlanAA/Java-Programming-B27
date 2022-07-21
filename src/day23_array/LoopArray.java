@@ -24,6 +24,7 @@ public class LoopArray {
         }
 
         // create our own printing format:
+        System.out.println("our own format");
         String arrayAsString = "Array ~ ";
         for(int i = 0; i < nums.length; i++){
             arrayAsString += nums[i] + " | ";
@@ -31,6 +32,12 @@ public class LoopArray {
         arrayAsString += "~ END";
         System.out.println(arrayAsString);
 
+        // go through with for each loop
+        System.out.println("For each loop:");
+
+        for(int eachNumber : nums){ // read every element from the array, beginning to end
+            System.out.println(eachNumber); // eachNumber == nums[i] --> these are the same
+        }
 
     }
 }
