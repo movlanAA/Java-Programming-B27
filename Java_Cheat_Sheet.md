@@ -3,7 +3,7 @@
 
 ---
 ### This document will highlight the main points of the topics we cover.
-#### Last updated: 07/12/2022
+#### Last updated: 07/21/2022
 
 ---
 ## Shortcuts
@@ -12,6 +12,11 @@ reformat code:
 	mac: option + command + l
 	windows: control + alt + l
 
+search anything
+    shift + shift
+    
+search inside of the files:
+    command/control + shift + f
 ```
 
 ---
@@ -563,10 +568,115 @@ Note: There is more methods that exist, we can not learn every single method cre
 
 ---
 
+# Loops
 
+Used to execute the same statements multiple times
 
+> Loop types:
 
+    - while loop: evalualtes a boolean expression to determine if the loop should iterate again
+        - if the boolean expression is true: the statements in the loop body are executed
+        - if the boolean expression is false: the loop stops
 
+        while(boolean) {
+            // statements
+        }   
 
+    - do while: one iteration of the statements is always guaranteed then the boolean expression is checked to determine if the loop continues or not
+        - if the boolean expression is true: the loop repeats and code statements are executed again
+        - if the boolean expression is false: the loop stops
 
-       
+		do {
+                // statements
+		} while(boolean);
+
+    - for loop: used when the iterations are known. Useful loop type because of the ability to define the parts exactly how you need to use them. Has built in functions of how code is executed
+
+        for(initialization; termination condition; update){
+            // statements
+        }
+        
+        flow of loop: variable from initialization part is created for the loop. This part only runs once. Then the boolean expression in the termination condtition is checked. If the boolean is true the statement in the loop are executed. Finally to finish an iteration the update part is executed. From there the boolean experssion is checked again and the cylce repeats until the boolean is false
+
+> Note: When a loop's boolean expression will never change to false the loop will continue to execute making it an infinite loop.
+
+> break & continue
+>
+>       break: stops and exits the loop
+> 
+>       continue: skips the rest of the current iterations 
+
+#### Nested loop
+> A nested loop is a loop inside another loop. 
+
+```
+Execution of a nested loop:
+the outer loop executes one iteration at a time
+but during each execution of the outer loop, the inner loop is executed from beginning to end each time
+the inner loop starts and ends each iteration of the outer loop
+
+    Example:
+    
+        for(int i = 0; i < 5; i++) {
+            for(int j = 0; j < 2; j++) {
+            
+            }   
+        }
+```
+---
+## Array
+    storing multiple information of similar type to one object
+    instead of using mutliple variables we can use an array to group that inforamtion
+
+#### Declaring array:
+
+```	
+declaring with values/elements
+
+    dataType[] name = {element, elm, elm ,etc};
+    String[] words = {"java", "testing", "Friday"};
+```
+```
+declare an empty array - the array will have default values based on type
+
+    dataType[] name = new datatType[size]
+    String[] strs = new String[5];
+    
+    default values of different types:
+        whole number: 0
+        floating number: 0.0
+        boolean: false
+        object: null
+```
+### Access Elements
+```
+elements have an index, start from 0
+arrayName[index] --> use this to read a value: use information from that array
+```
+### Changing/Reassigning Elements
+```
+arrayName[index] = value --> use this to write to the array: put information into the array
+```
+### Printing an array
+```
+Trying to print the array reference will not show the elements, but instead some hash about the object in the memory
+
+To print an array we need to use the utility class and its method:
+    Arrays.toString(arr) -> returns a String format of the array
+```
+
+### For each loop
+    a loop used to iterate elements from a collection/data strcuture
+    
+    we know arrays at this point
+    
+        for(datatype variableName: array) {
+        
+        }   
+
+    flow: goes from the first element to the last always, every iteration the variableName represent every element, one element at a time
+    
+    the variableName is the same as arrayName[i] in a for loop where i is the index from 0 to the end of the array
+
+> Note: The for each loop can only be used when reading/using information from the array, but whenever specific indexes are needed, or the array needs to be modified then the for each loop cannot be used
+---
