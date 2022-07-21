@@ -5,6 +5,32 @@
 ### This document will highlight the main points of the topics we cover.
 #### Last updated: 07/21/2022
 
+## Table of Contents:
+
+    Click to go directly to the section
+---
+[Shortcuts](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#shortcuts)
+
+[Introduction to Programming](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#introduction-to-programming)
+
+[IntelliJ](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#intellij)
+
+[Java Basics](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#java-basics)
+
+[Variables](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#variables)
+
+[Operators](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#operators)
+
+[Scanner](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#scanner)
+
+[Conditional Statements](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#conditional-statements)
+
+[String](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#string)
+
+[Loops](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#loops)
+
+[Array](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#array)
+
 ---
 ## Shortcuts
 ```
@@ -215,7 +241,7 @@ Primitive datatypes:
 
 ---
 
-### Operators
+## Operators
 
 #### Arithmetic Operators
   Operators used to perform arithmetic calculations
@@ -574,7 +600,7 @@ Used to execute the same statements multiple times
 
 > Loop types:
 
-    - while loop: evalualtes a boolean expression to determine if the loop should iterate again
+    - while loop: evaluates a boolean expression to determine if the loop should iterate again
         - if the boolean expression is true: the statements in the loop body are executed
         - if the boolean expression is false: the loop stops
 
@@ -596,18 +622,18 @@ Used to execute the same statements multiple times
             // statements
         }
         
-        flow of loop: variable from initialization part is created for the loop. This part only runs once. Then the boolean expression in the termination condtition is checked. If the boolean is true the statement in the loop are executed. Finally to finish an iteration the update part is executed. From there the boolean experssion is checked again and the cylce repeats until the boolean is false
+        flow of loop: variable from initialization part is created for the loop. This part only runs once. Then the boolean expression in the termination condition is checked. If the boolean is true the statement in the loop are executed. Finally to finish an iteration the update part is executed. From there the boolean expression is checked again and the cycle repeats until the boolean is false
 
 > Note: When a loop's boolean expression will never change to false the loop will continue to execute making it an infinite loop.
 
 > break & continue
 >
 >       break: stops and exits the loop
-> 
+>
 >       continue: skips the rest of the current iterations 
 
 #### Nested loop
-> A nested loop is a loop inside another loop. 
+> A nested loop is a loop inside another loop.
 
 ```
 Execution of a nested loop:
@@ -626,7 +652,7 @@ the inner loop starts and ends each iteration of the outer loop
 ---
 ## Array
     storing multiple information of similar type to one object
-    instead of using mutliple variables we can use an array to group that inforamtion
+    instead of using multiple variables we can use an array to group that information
 
 #### Declaring array:
 
@@ -666,7 +692,7 @@ To print an array we need to use the utility class and its method:
 ```
 
 ### For each loop
-    a loop used to iterate elements from a collection/data strcuture
+    a loop used to iterate elements from a collection/data structure
     
     we know arrays at this point
     
