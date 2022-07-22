@@ -52,11 +52,5 @@ public class SchoolStore {
 
         System.out.println("Most Expensive item: " + itemId[indexOfMax] + " | " + items[indexOfMax] + " | $" + prices[indexOfMax]);
 
-
-
-
-
-
-
     }
 }
