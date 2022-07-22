@@ -40,6 +40,5 @@ public class StringMethods {
         System.out.println(Arrays.toString(str4.toCharArray()));  // char[]
         System.out.println(Arrays.toString(str4.split(""))); // String[]
 
-
     }
 }
