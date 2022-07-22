@@ -38,6 +38,5 @@ Hint: You don’t have to manipulate the given array, try to use another array t
         }
         System.out.println(Arrays.toString(fixed));
 
-
     }
 }
