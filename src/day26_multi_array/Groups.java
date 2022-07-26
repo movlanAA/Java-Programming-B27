@@ -21,15 +21,15 @@ public class Groups {
         System.out.println();
         // how to loop through each inner array
 
-        for(String[] eachInner : cydeo){ // to loop through a 2d array, the element's type is a 1d array
+        for (String[] eachInner : cydeo) { // to loop through a 2d array, the element's type is a 1d array
             System.out.println(Arrays.toString(eachInner));
         }
 
         System.out.println();
         // how to loop through each name
 
-        for(String[] eachInner : cydeo){
-            for(String eachName : eachInner){
+        for (String[] eachInner : cydeo) {
+            for (String eachName : eachInner) {
                 System.out.println(eachName);
             }
         }
@@ -37,8 +37,8 @@ public class Groups {
         System.out.println();
         // how to loop through each name and print the last letter in uppercase
 
-        for(String[] eachInner : cydeo){
-            for(String eachName : eachInner){
+        for (String[] eachInner : cydeo) {
+            for (String eachName : eachInner) {
                 System.out.println(eachName.substring(eachName.length() - 1).toUpperCase());
             }
         }
