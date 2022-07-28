@@ -45,7 +45,6 @@ Ex:
 
         System.out.println(Arrays.toString(merged));
 
-
     }
 
 }
