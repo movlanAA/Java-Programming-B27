@@ -49,3 +49,9 @@ Ex:
     }
 
 }
+
+/*
+    int [] a = new int[4]
+    a[0] = 5;
+    a[i] = value
+ */
