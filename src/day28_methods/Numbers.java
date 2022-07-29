@@ -28,6 +28,9 @@ public class Numbers {
         Scanner input = new Scanner(System.in);
         checkNum(input.nextInt());
 
+        int n = 3;
+        checkNum(n);
+
     }
 
 
