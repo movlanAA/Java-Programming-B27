@@ -6,7 +6,7 @@ public class DayInWeek {
         System.out.println(dayInWeek(4));
         System.out.println(dayInWeek(7));
 
-        switch (dayInWeek(1)){
+        switch (dayInWeek(7)){
             case "Mon":
             case "Fri":
                 System.out.println("Have full day of java");
