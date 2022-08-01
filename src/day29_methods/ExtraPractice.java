@@ -6,18 +6,24 @@ public class ExtraPractice {
         int[] nums = {1, 24, 5, 12};
         System.out.println(sumFromArray(nums)); // int sum = sumFromArray(nums);
 
-        System.out.println(currencyConvertor("yen", 100));
-        System.out.println(currencyConvertor("won", 100));
-        System.out.println(currencyConvertor("EURO", 100));
+        System.out.println(currencyConverter("yen", 100));
+        System.out.println(currencyConverter("won", 100));
+        System.out.println(currencyConverter("EURO", 100));
+        System.out.println(currencyConverter("peso", 100));
+
+        String name = "lira";
+        double price = 800;
+
+        System.out.println(currencyConverter(name, price));
 
     }
 
     /*
     Create a method that accept an int array. Take the sum of all the numbers and return the sum
      */
-    public static int sumFromArray(int[] nums){
+    public static int sumFromArray(int[] nums) {
         int sum = 0;
-        for(int eachNum: nums){
+        for (int eachNum : nums) {
             sum += eachNum;
         }
         return sum;
@@ -55,9 +61,9 @@ Currency Converter
     ________________________
      */
 
-    public static double currencyConvertor(String type, double dollar){
+    public static double currencyConverter(String type, double dollar) {
         double converted = 0.0;
-        switch (type.toLowerCase()){
+        switch (type.toLowerCase()) {
             case "euro":
                 converted = dollar * 0.91;
                 break;
@@ -79,8 +85,24 @@ Currency Converter
         return converted;
     }
 
-
-
-
+        // alternative with return each case:
+//    public static double currencyConverter(String type, double dollar) {
+//        switch (type.toLowerCase()) {
+//            case "euro":
+//                return dollar * 0.91;
+//            case "yen":
+//                return dollar * 121.03;
+//            case "lira":
+//                return dollar * 14.85;
+//            case "won":
+//                return dollar * 1_217.52;
+//            case "rupee":
+//                return dollar * 181.45;
+//            default:
+//                System.out.println("We cannot convert to " + type);
+//                return 0.0;
+//        }
+//
+//    }
 
 }
