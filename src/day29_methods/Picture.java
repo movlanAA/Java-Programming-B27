@@ -7,7 +7,6 @@ public class Picture {
         draw("red");
         draw(10);
         draw("hello", "world");
-        new String().indexOf()
 
     }
 
