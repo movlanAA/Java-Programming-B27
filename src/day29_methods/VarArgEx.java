@@ -10,6 +10,8 @@ public class VarArgEx {
         //dynamic(a); this works
         dynamic(4, 1, 4, 1, 5, 2);
 
+        System.out.println();
+        dynamic("hello", "monday", "java");
 
     }
 
@@ -19,12 +21,17 @@ public class VarArgEx {
         }
     }
 
-    public static void dynamic(int ... nums) {
+    public static void dynamic(int ... nums) { //  int ... nums is the same as int[] nums
         for(int each : nums){
             System.out.print(each + " ");
         }
     }
 
+    public static void dynamic(String ... words) { // String ... words is the same as String[] words
+        for(String each : words){
+            System.out.print(each + " ");
+        }
+    }
 
 
 }
