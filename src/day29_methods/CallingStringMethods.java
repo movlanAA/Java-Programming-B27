@@ -11,6 +11,7 @@ public class CallingStringMethods {
 
         System.out.println(StringUtil.fixFormat("jAMEs"));
 
+        System.out.println(StringUtil.camelCase("JAVA will ruLE tHe wORLd"));
 
 
     }
