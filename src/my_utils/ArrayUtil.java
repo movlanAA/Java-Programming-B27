@@ -80,5 +80,23 @@ public class ArrayUtil {
         return -1;
     }
 
+    /*
+        Add Element
+
+        create a method that will accept a String array and a String element. Add the given element value into the end of the array. Do not replace the last index of the given array, but instead create a new array with a bigger size to fit all the original elements plus the new one
+     */
+
+    public static String[] addElement(String[] arr, String element){
+
+        String[] newArr = new String[arr.length + 1]; // create an array with an extra size
+
+        for(int i = 0; i < arr.length; i++){ // adds all the elements from the original array to the new array
+            newArr[i] = arr[i];
+        }
+
+        newArr[newArr.length - 1] = element; // add the new element to the end of the new array
+
+        return newArr;
+    }
 
 }

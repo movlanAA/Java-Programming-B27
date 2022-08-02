@@ -42,6 +42,12 @@ public class UsingArraysUtilClass {
         int firstIndex = ArrayUtil.indexOf(d, 6); // same as line 39
         int secondIndex = ArrayUtil.indexOf(d, 6, firstIndex + 1); // same as line 40
 
+        System.out.println("----------------\nAdd element method");
+
+        String[] words = {"java", "is", "the", "best"};
+        // I want to add: language into the array
+        String[] allWords = ArrayUtil.addElement(words, "language");
+        System.out.println(Arrays.toString(allWords));
 
 
     }
