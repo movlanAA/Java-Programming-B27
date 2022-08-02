@@ -37,6 +37,22 @@ public class ArrayUtil {
         return max;
     }
 
+    /*
+    Contains
+        create a method that will accept an int array and an int number. Check and return if the given number is in the array.
+     */
+
+    public static boolean contains(int [] arr, int num){
+
+        for(int each : arr){
+            if(each == num){
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 
 
 }
