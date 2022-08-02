@@ -53,6 +53,32 @@ public class ArrayUtil {
         return false;
     }
 
+    /*
+    IndexOf
+        create a method that will accept an int array and an int number. Find and return the index of the number in the array. If there is multiple occurrence return the first occurrence's index
+     */
+
+    // if you wanted to use var args: public static int indexOf(int num, int ... arr) {
+    public static int indexOf(int [] arr, int num) {
+
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] == num){ // every number from the array with the number we are look for
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+    public static int indexOf(int[] arr, int target, int startIndex){
+        for(int i = startIndex; i < arr.length; i++){
+            if(arr[i] == target){ // every number from the array with the number we are look for
+                return i;
+            }
+        }
+
+        return -1;
+    }
 
 
 }
