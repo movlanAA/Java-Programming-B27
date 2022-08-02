@@ -49,6 +49,14 @@ public class UsingArraysUtilClass {
         String[] allWords = ArrayUtil.addElement(words, "language");
         System.out.println(Arrays.toString(allWords));
 
+        System.out.println("----------------\nAdd element method");
+
+        String[] strs = {"today", "is", "tuesday"};
+        String[] other = {"no", "softskills", "today"};
+
+        String[] multipleAdded = ArrayUtil.addElement(strs, other);
+        System.out.println(Arrays.toString(multipleAdded));
+
 
     }
 

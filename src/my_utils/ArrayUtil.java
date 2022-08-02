@@ -99,4 +99,33 @@ public class ArrayUtil {
         return newArr;
     }
 
+    /*
+    Add Element
+
+        overload the add element method to accept two String arrays. For this one add all the given elements from the second array in the the first array.
+
+        Ex:
+            {"today", "is", "monday"}
+            {"no", "softskills", "today"}
+
+        output > [today, is, monday, no, softskills, today]
+             */
+
+    public static String[] addElement(String[] original, String[] other){
+
+        String[] merged = new String[original.length + other.length];
+
+        for(int i = 0; i < original.length; i++) { // copy the elements from the original array to the new array
+            merged[i] = original[i];
+        }
+
+        // option: int i = 0, j = original.length; j++ --> merged[j]
+        for(int i = 0; i < other.length; i++){ // read the elements from the other array and store them into the merged array
+           merged[original.length + i] = other[i];
+        }
+//[today, is, monday, no, softskills, today]
+        return merged;
+    }
+
+
 }
