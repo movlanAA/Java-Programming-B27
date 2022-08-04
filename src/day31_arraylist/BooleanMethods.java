@@ -41,8 +41,8 @@ public class BooleanMethods {
         list4.add(2);
         list4.add(1);
 
-        System.out.println("list3 + " + list3);
-        System.out.println("list4 + " + list4);
+        System.out.println("list3 " + list3);
+        System.out.println("list4 " + list4);
         System.out.println(list3.equals(list4));
 
     }
