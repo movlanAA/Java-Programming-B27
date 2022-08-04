@@ -65,8 +65,6 @@ public class RemovingMethod {
         nums.remove((Integer) 4);
         System.out.println(nums);
 
-
-
     }
 }
 
