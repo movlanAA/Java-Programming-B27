@@ -22,5 +22,14 @@ public class AddMethods {
         System.out.println(letters.get(2));
         System.out.println(letters.get(3));
 
+        System.out.println(letters);
+
+        letters.add(0, '$');
+        System.out.println(letters);
+        System.out.println(letters.get(1));
+
+        letters.add(3, '8');
+        System.out.println(letters);
+
     }
 }
