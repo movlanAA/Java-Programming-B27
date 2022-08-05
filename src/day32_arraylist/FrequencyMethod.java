@@ -25,7 +25,6 @@ public class FrequencyMethod {
             Arrays.asList(s.split("")) --> converts the String[] to ArrayList<String>
             new ArrayList<>( Arrays.asList(s.split(""))); --> creates an ArrayList of each character as its own element
 
-
          */
         System.out.println(list);
         System.out.println(Collections.frequency(list, "a"));
