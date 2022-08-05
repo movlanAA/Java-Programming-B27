@@ -42,9 +42,7 @@ public class LoopList {
             } else {
                 System.out.println(each.charAt(0));
             }
-
         }
-
 
     }
 }
