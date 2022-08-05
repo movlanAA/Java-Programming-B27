@@ -15,7 +15,9 @@ public class CreatingWithValues {
         // Create an ArrayList with initial values
 
         Integer[] arr2 = {3, 4, 4, 6};
-        ArrayList<Integer> nums = new ArrayList<>( Arrays.asList(arr2) ); // arr is not valid because it is int primitive types
+        ArrayList<Integer> nums = new ArrayList<>( Arrays.asList(arr2) );
+
+        // Arrays.asList(arr) -> arr is not valid because it is int primitive types, so we needed to create an array of wrapper class Integer values (arr2)
 
         // The way we will usually create an ArrayList
 

@@ -21,13 +21,13 @@ public class VendingMachine {
         ArrayList<String> drinks = new ArrayList<>(Arrays.asList("Soda", "Juice", "Water", "Coffee"));
 
         System.out.println("Welcome. Which drink would you like?");
-        String selection = input.next(); // StringUtil.fixFormat(input.next())
+        String selection = input.next(); //  = StringUtil.fixFormat(input.next())
 
         if(drinks.contains(selection)){
             System.out.println(selection + " is vending");
         } else {
             System.out.println(selection + " is not in the vending machine");
-        }
+        } //come back 3:17 est
 
 
 
