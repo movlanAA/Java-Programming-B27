@@ -18,7 +18,7 @@ public class EasyData {
         Random random = new Random(); // Research about this class, look at documentation
         ArrayList<Integer> list = new ArrayList<>();
         for(int i = 0; i < limit; i++){
-            list.add(random.nextInt());
+            list.add(random.nextInt(1000)); // 0 to 1000
         }
         return list;
     }
