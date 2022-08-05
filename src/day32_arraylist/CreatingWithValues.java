@@ -22,5 +22,10 @@ public class CreatingWithValues {
         ArrayList<Integer> list = new ArrayList<>( Arrays.asList(5, 2, 4, 5, 1, 4) );
         System.out.println(list);
 
+        ArrayList<String> names = new ArrayList<>(
+                Arrays.asList("james", "adam", "ana", "jane")
+        );
+        System.out.println(names);
+
     }
 }
