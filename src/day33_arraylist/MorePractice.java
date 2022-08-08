@@ -19,7 +19,17 @@ public class MorePractice {
         ArrayList<String> byLastLetter = new ArrayList<>(names);
         byLastLetter.removeIf(str -> !str.endsWith("a"));
         System.out.println(byLastLetter);
+        System.out.println("---------------------------------------------------------------------");
 
+        System.out.println(names);
+
+//        for(String each : names){
+//            System.out.println(each);
+//        }
+
+        names.forEach(each -> System.out.println(each)); // print every element from the list
+
+        names.forEach(name -> System.out.println(name.charAt(0) + " " + name.charAt(name.length() -1)));
 
     }
 }
