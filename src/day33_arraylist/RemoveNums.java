@@ -19,6 +19,12 @@ public class RemoveNums {
 
         System.out.println(nums);
 
+        // -------------------------------------------------------------------
+
+        ArrayList<Integer> nums2 = new ArrayList<>(Arrays.asList(1, 5, 2, 3, 5, 2, 1, 5, 1, 8, 9, 7, 4, 10, 0, 2, 3));
+        // remove all the numbers that are less than 5 - using removeIf
+        nums2.removeIf( n -> n < 5 ); // n will be every element
+        System.out.println(nums2);
 
     }
 }
