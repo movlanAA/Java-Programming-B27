@@ -1,6 +1,7 @@
 package day33_arraylist;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class HidePassword {
     /*
@@ -15,6 +16,10 @@ public class HidePassword {
     [ ***, **, **** ]
 
      */
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>(Arrays.asList("one", "two", "three", "monday"));
+        System.out.println(hidePassword(list));
+    }
 
     public static ArrayList<String> hidePassword(ArrayList<String> list){
 
@@ -35,7 +40,6 @@ public class HidePassword {
         }
         return stars;
     }
-
 
 }
 
