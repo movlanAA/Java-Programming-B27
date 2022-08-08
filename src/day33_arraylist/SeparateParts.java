@@ -35,7 +35,6 @@ Write a program that can extract the special characters, digits and letters from
 
 //       ArrayList<String> words = new ArrayList<>(Arrays.asList("Hello", "World", "Friday"));
 //       words.forEach(e -> System.out.println(e.charAt(0)));
-
     }
 }
 
