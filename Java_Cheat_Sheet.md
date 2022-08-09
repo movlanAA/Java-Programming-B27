@@ -31,6 +31,14 @@
 
 [Array](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#array)
 
+[Methods](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#methods)
+
+[Wrapper Classes](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#wrapper-classes)
+
+[ArrayList](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#arraylist)
+
+
+
 ---
 ## Shortcuts
 ```
