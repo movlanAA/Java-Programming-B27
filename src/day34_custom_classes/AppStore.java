@@ -18,7 +18,8 @@ public class AppStore {
 
         System.out.println(instagram); // now that we wrote the toString we can print the object
 
-        System.out.println(instagram.toString()); // this is not necessary because toString is automatically called
+        //System.out.println(instagram.toString()); // this is not necessary because toString is automatically called
+
 
     }
 }
