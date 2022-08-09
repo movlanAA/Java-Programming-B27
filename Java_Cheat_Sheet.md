@@ -3,7 +3,7 @@
 
 ---
 ### This document will highlight the main points of the topics we cover.
-#### Last updated: 07/21/2022
+#### Last updated: 08/09/2022
 
 ## Table of Contents:
 
@@ -43,6 +43,9 @@ search anything
     
 search inside of the files:
     command/control + shift + f
+    
+generate menu
+    command/control + n
 ```
 
 ---
@@ -706,3 +709,408 @@ To print an array we need to use the utility class and its method:
 
 > Note: The for each loop can only be used when reading/using information from the array, but whenever specific indexes are needed, or the array needs to be modified then the for each loop cannot be used
 ---
+
+### Multidimensional arrays
+```
+        Allows the array to hold other arrays. The element of a multidimensional array is a single array
+
+        single array
+                int [] a = { 1, 2, 3};
+
+        2D array
+                int [][] arr = {
+                        {1, 2, 3},
+                        {4, 5, 6}
+                }
+
+                arr[1] -> {4, 5, 6}
+                arr[1] = { 10, 30 10};
+
+                        To access the elements we will still use indexes. In this case the elements are other arrays
+
+                - To create a 2d array you can use single array variables, or make the single arrays right away in the declaration
+
+        Print the multidimensional arrays:
+
+                Arrays.deepToString(arr);
+```
+
+#### declaring 2D array
+```
+	datatType [][] arrayName = new dataType[x][z];
+
+		where x is how many elements the 2D array has - number of arrays
+
+		where z is the size of each inner array
+			-> is optional to define. If it is not defined then the inner arrays sizes do not matter, they can be different
+
+	datatType [][] arrayName = { arrayName1, arrayName2, etc}
+
+	dataType [][] arrayName = { {element, element, element, etc}, {element, element, element, etc}, {element, element, element, etc} };
+```
+
+#### Iterating through a 2D array:
+```
+	for each: (using double array above)
+
+		for(double[] eachInner : prices){ <-- elements of prices are 1D, double arrays. In the loop we are calling them eachInner
+
+			for(double eachNum : eachInner){
+				// now we have access to each price number using eachNum variable
+			}
+
+		}
+
+	traditional: 
+
+		for(int i = 0; i < prices.length; i++){
+
+			for(int j = 0; j < prices[i].length; j++){ // prices[i].length --> length of each inner array
+					// here we have access to each price number using prices[i][j]
+			}
+		}
+```
+---
+
+## Methods
+```
+	being able to create a set of statements that have a function/action that are in some code block
+		-> makes it reusable, maintainable, readable
+
+	public static RETURN_TYPE methodName(){
+	
+	}	
+
+	RETURN_TYPE: 2 type of methods:
+		void - nothing is given back from the method
+		return type - does an action and return a single value back
+		
+            if a method has a return type defined instead of the void, then there must be a return value. 
+                -> The return value is given using the 'return' keyword in the method
+
+            return method work with and without parameters
+```
+
+#### Parameters: defined variables that the method needs in order to execute, the information acts are input data
+```
+	those parameters are defined in the parenthesis of the method
+
+	Note: if a method has a parameter a value must be given in order to execute that method
+	Note: to put multiple parameters separate by comma
+		(int a, int b)
+		(String s, byte b)
+		(int[] arr, int n)
+
+	the argument is the value given when calling the method
+
+	Ex:
+
+		public static void letter(char c){
+
+		}
+
+		char c --> parameters
+
+		letter('a') --> 'a' is the argument
+```
+#### How to call a method:
+```
+
+    - Assuming they are static methods for now
+
+	in the same file: only need method name
+
+	outside the file: className.method()
+
+	-> Anytime you want to use anything from a different package you should import the class
+
+		import packageName.className
+
+		order in java file: PIC -> package -> import -> class
+```
+
+#### Method Overloading
+```
+	method has the same name, but different parameters
+
+		-> allow us to have different methods that share a similar idea and work with different inputs
+
+		+ readability
+		+ re usability
+
+	Ex from String class:
+		substring(int)
+		substring(int, int)	
+
+		in this class we had two method that had the same name. They have a similar idea but the result can be different based on which argument were given
+
+			if you give one int, choose starting point and returns all characters after that point
+			if you give two int, it would return the characters in the range of those numbers
+			
+    Q: Does changing the return type overload the method?
+    
+        NO, changing the parameters is what overload the method
+    
+        -> but if you overload correctly, then it is possible to change the return type
+```
+#### Variable Arguments (Var args)
+```
+	syntax of three dots, which represents an array, but allow you to type number directly, instead of having to create an array first
+
+	method(int[] arr) -> parameter is an int array
+
+	calling this method:
+		method() --> argument should be int array, which means we will create one first then use the method
+
+var arg version:
+
+	method(int ... arr)	-> parameter is an int array
+		this one allows to type numbers, separates by commas when calling the method
+
+	calling this method:
+		method(num, num2, num3, etc) --> the numbers typed here will be the elements of the array argument
+```
+---
+## Wrapper Classes
+	object representation of the primitive datatypes	
+
+	classes are defined in java.lang
+
+```
+primitive 	|	wrapper class/object
+------------------------------
+byte		| 	Byte
+short		|	Short
+int 		|	Integer
+long 		|	Long	
+float 		|	Float
+double 		|	Double
+char 		|	Character
+boolean 	|	Boolean
+```
+```
+Why do we need these?
+
+	1) Collections do not work with primitive datatypes
+		-> ArrayList will be our first collection, so ArrayList will not work with primitive datatypes
+
+	2) The wrapper classes have helpful methods and information
+
+How to create the wrapper class object:
+
+	className variable = value <- preferred way
+
+	ex:
+
+	Integer i = 10;
+
+IQ: What is autoboxing and unboxing?
+
+	* Both are done automatically
+	
+	autoboxing: converting the primitive datatype to a wrapper class object
+
+	unboxing: converting from the wrapper class object to the primitive datatype
+
+Useful methods: [See documentation for more]
+	
+	MAX & MIN values -> information
+
+	Character.isDigit()
+	Character.isLetter()
+	Character.isUppercase()
+	Character.isLowercase()
+
+	Integer.parseInt() -> convert String to an int type
+
+IQ: difference between parse and valueOf
+	
+	parse: return primitive type
+
+	valueOf: return wrapper class objects
+	
+	Ex: 
+
+		String s = "34";
+		Integer.parseInt(s) --> 34 as int type
+		Integer.valueOf(s) --> 34 as Integer type
+```
+---
+## ArrayList
+```
+	ArrayList is a class. Part of the collection framework
+		-> different collections help to work with many data
+
+    class is located in java.util package
+
+	ArrayList uses arrays internally
+	
+	ArrayList allows duplicate elements
+	ArrayList is ordered. You can access the elements by indexes. Order of the elements is known(insertion order)
+
+	* ArrayList is a dynamic array
+		-> in ArrayList the size is NOT fixed
+		the size will grow and shrink when needed
+		
+	Syntax:
+	    ArrayList<DATATYPE> name = new ArrayList<>();
+```
+```
+Array vs ArrayList
+
+	Array
+		fixed size
+		use both used with primitive & non primitive types
+		object type
+		no methods
+		in general takes less memory
+		Need to use Arrays.toString() to print the array
+
+	ArrayList
+		dynamic size
+		only use object types (non primitive types)
+		object type
+		has methods to use the data
+		in general takes more memory
+		can be printed using only print statement, no need for anything else
+```
+
+```
+ArrayList Methods:
+
+	size(): returns the number of elements
+		return int
+
+		last index: size() - 1
+
+	add(element): adds the element to the end of the ArrayList
+		return boolean -> returns true, we don't usually use this return value.
+
+	add(int, element): adds the element at the given index number. All the other elements move position	
+
+	get(int): return the element at the given index number
+		return element 
+
+	clear(): removes all the elements from the ArrayList	
+
+	remove(int): removes the element at the given index. All elements shift over
+		returns the element that is removed
+
+			-> if you try to remove an index that doesn't exist: out of bounds
+
+	remove(element): remove the element that was defined from the ArrayList. 
+		returns boolean
+			true: if the element was removed
+			false: if the element was not removed - if the element did not exist
+
+	isEmpty(): checks if there is any elements in the ArrayList
+		returns boolean
+			true: ArrayList is empty, no elements
+			false: if there is any elements
+
+	contains(element): checks if the ArrayList has the given element
+		returns boolean
+			true: ArrayList has the element
+			false: ArrayList does not have the element
+
+	equals(ArrayList) checks if the given ArrayList is equal to the ArrayList using the method
+		return boolean
+			true: if the two ArrayList are the same, which means they have the same elements, same order
+			false: if the ArrayList are not the same
+			
+    indexOf(element): returns the index of the given element. The index returned will be the first occurrence of the element   
+    	returns int
+
+    set(int, element): replace the element at the given index with the given new element
+
+```
+```
+Creating ArrayList in different ways
+
+	ArrayList<type> name = new ArrayList<>();
+
+		creates an empty ArrayList
+
+	ArrayList<type> name = new ArrayList<>( collection type );
+
+		collection type: there is a collection framework that has many components 
+			ArrayList is a collection type
+
+		ArrayList<type> name = new ArrayList<>( arraylist object );
+
+	Using Arrays.asList()
+
+		parameters: an array ( var arg )
+		returns: collection type
+
+	Use both parts together to create an ArrayList with values
+
+	ArrayList<type> name = new ArrayList<>( Arrays.asList() );
+	Ex: .asList("hello", "world", "Friday")
+		.asList(3, 4, 5, 1, 5, 5)
+```
+
+#### Collections
+```
+	a utility class for collection types
+	located in java.util package
+
+	Collections.sort()
+	Collections.max()
+	Collections.min()
+	Collections.frequency()
+
+	others: shuffle, reverse, swap
+	
+	Note: this is just a sample of the methods. For the full list check the documentation 
+```
+
+#### Bulk Operation Methods
+```
+	the arguments of each methods are collection types
+
+	addAll(collection type): add all the elements from the given argument to the ArrayList
+
+	removeAll(collection type): removes every occurrence of every element from the given argument
+
+	containsAll(collection type): checks if every element from the given argument is in the ArrayList 
+
+	retainAll(collection type): keeps all the defined elements, but deletes all the others
+```
+```
+
+Also ArrayList methods: arguments are different
+
+removeIf( lambda )
+
+to define the argument we will use a lambda expression
+
+syntax for lambda:
+
+	variable -> boolean expression(use that defined variable)
+
+forEach( lambda )
+
+	variable -> statement want to run with each element
+
+	-> this statement is not a boolean like it was for removeIf()
+	
+Note: We will talk about lamdba and how these methods were working towards the end of the course
+```
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
