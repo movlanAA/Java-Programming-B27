@@ -8,5 +8,8 @@ public class Student {
     String program;
     double grade;
 
+    public void study(){
+        System.out.println(name + " is studying");
+    }
 
 }

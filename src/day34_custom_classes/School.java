@@ -1,7 +1,5 @@
 package day34_custom_classes;
 
-import javax.xml.namespace.QName;
-
 public class School {
     public static void main(String[] args) {
 
@@ -21,6 +19,10 @@ public class School {
         System.out.println(studentOne.program);
         System.out.println(studentOne.grade);
 
+        // call in the instance method:
+        //Student.study(); this only work if the method was static
+        studentOne.study();
+
         System.out.println("-------------------------");
         Student studentTwo = new Student();
         System.out.println(studentTwo.name);
@@ -28,10 +30,13 @@ public class School {
         System.out.println(studentTwo.program);
         System.out.println(studentTwo.grade);
 
+        studentTwo.study();
+
         /*
         in this case we created a new object of the Student class
         it means this object has a fresh copy of the instance variables, which means they will have their default values
          */
+
 
 
     }
