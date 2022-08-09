@@ -1,4 +1,4 @@
-package day34_custom_classes;
+package day34_custom_classes.house;
 
 public class Market {
     public static void main(String[] args) {
