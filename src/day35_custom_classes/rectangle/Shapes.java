@@ -1,4 +1,4 @@
-package day35_custom_classes;
+package day35_custom_classes.rectangle;
 
 public class Shapes {
     public static void main(String[] args) {
