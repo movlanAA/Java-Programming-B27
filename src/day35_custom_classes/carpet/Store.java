@@ -14,6 +14,5 @@ public class Store {
         persian.calculatePrice();
         System.out.println(persian);
 
-
     }
 }
