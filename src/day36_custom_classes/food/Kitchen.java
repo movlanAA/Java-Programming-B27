@@ -39,5 +39,12 @@ public class Kitchen {
             }
         }
 
+        System.out.println("Food that is over $9");
+        for(Food each: allFood){
+            if(each.totalPrice >= 9){
+                System.out.println(each.name);
+            }
+        }
+
     }
 }
