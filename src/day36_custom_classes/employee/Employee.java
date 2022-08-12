@@ -12,6 +12,8 @@ public class Employee {
 
             - create a constructor that creates an Employee object with the name, id, job title, and salary
 
+            NEW PART: create four total constructors
+
         - method:
 
             goToMeeting()
@@ -28,6 +30,21 @@ public class Employee {
     long id;
     String jobTitle;
     double salary;
+
+    public Employee(String name) {
+        this.name = name;
+    }
+
+    public Employee(String name, long id) {
+        this.name = name;
+        this.id = id;
+    }
+
+    public Employee(String name, long id, String jobTitle) {
+        this.name = name;
+        this.id = id;
+        this.jobTitle = jobTitle;
+    }
 
     public Employee(String name, long id, String jobTitle, double salary) {
         this.name = name;

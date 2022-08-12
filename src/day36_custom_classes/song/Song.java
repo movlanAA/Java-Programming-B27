@@ -26,6 +26,11 @@ public class Song {
     String artist;
     String genre;
 
+    public Song(String name, double length){
+        this.name = name;
+        this.length = length;
+    }
+
     public Song(String name, double length, String artist, String genre){
         this.name = name;
         this.length = length;
