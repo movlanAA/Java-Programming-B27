@@ -78,7 +78,7 @@ public class Food {
             str += ", total price: $" + totalPrice;
         }
 
-        return str;
+        return " < " + str  + " > ";
     }
 
 }
