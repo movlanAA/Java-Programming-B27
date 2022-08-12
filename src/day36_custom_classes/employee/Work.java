@@ -39,6 +39,8 @@ public class Work {
         arr[1] = obj2;
         arr[2] = obj3;
         System.out.println(Arrays.toString(arr));
+        System.out.println(arr[0].name);
+        System.out.println(arr[0].salary);
 
         ArrayList<Employee> list = new ArrayList<>();
 
