@@ -45,5 +45,13 @@ public class EmployeeV2 {
         return output;
     }
 
+    // not allowed to call itself
+//    public EmployeeV2(int a){
+//        this();
+//    }
+//
+//    public EmployeeV2(){
+//        this(5);
+//    }
 
 }

@@ -1,5 +1,8 @@
 package day36_custom_classes.employee;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Work {
     public static void main(String[] args) {
 
@@ -30,6 +33,14 @@ public class Work {
         EmployeeV2 obj12 = new EmployeeV2("Penny", 12, "CEO");
         System.out.println(obj12);
 
+        // for practice:
+        Employee[] arr = new Employee[3];
+        arr[0] = james;
+        arr[1] = obj2;
+        arr[2] = obj3;
+        System.out.println(Arrays.toString(arr));
+
+        ArrayList<Employee> list = new ArrayList<>();
 
     }
 }
