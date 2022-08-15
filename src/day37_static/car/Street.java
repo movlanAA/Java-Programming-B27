@@ -10,3 +10,11 @@ public class Street {
 
     }
 }
+
+/*
+
+    for using the overloaded with Driver argument
+    Driver obj = new Driver("name", 0, 'A')
+    Car car = new Car("car", obj);
+
+ */
