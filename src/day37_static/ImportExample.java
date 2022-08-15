@@ -18,7 +18,7 @@ public class ImportExample {
 
         System.out.println(MAX_VALUE);
         System.out.println(MIN_VALUE);
-        parseInt(""); // Integer.parseInt();
+        parseInt("4"); // Integer.parseInt();
 
         int [] a = {43, 4, 2};
         System.out.println(Arrays.toString(a));
