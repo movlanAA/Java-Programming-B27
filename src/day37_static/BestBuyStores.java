@@ -20,6 +20,6 @@ public class BestBuyStores {
 
        //Arrays.sort(); accessing static method from Arrays class
 
-    } come back 11:10 est
+    }
 
 }
