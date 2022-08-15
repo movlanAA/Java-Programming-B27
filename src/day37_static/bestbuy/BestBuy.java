@@ -1,4 +1,4 @@
-package day37_static;
+package day37_static.bestbuy;
 
 public class BestBuy {
 

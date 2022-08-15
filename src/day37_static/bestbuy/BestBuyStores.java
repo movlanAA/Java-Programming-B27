@@ -1,6 +1,4 @@
-package day37_static;
-
-import java.util.Arrays;
+package day37_static.bestbuy;
 
 public class BestBuyStores {
 
