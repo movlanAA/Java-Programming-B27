@@ -4,8 +4,8 @@ public class TrafficLight {
 
     private String color;
 
-    public TrafficLight(String color){
-        setColor(color);
+    public TrafficLight(String color){ // constructor
+        setColor(color); // calling a setter method
     }
 
     public String getColor() {
