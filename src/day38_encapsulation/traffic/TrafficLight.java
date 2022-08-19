@@ -1,4 +1,4 @@
-package day38_encapsulation;
+package day38_encapsulation.traffic;
 
 public class TrafficLight {
 
