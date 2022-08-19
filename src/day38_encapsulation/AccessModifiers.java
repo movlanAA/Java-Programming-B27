@@ -7,6 +7,7 @@ public class AccessModifiers {
     private int c = 20;
 
     public static void main(String[] args) {
+
         AccessModifiers obj = new AccessModifiers();
         System.out.println(obj.a);
         System.out.println(obj.b);
