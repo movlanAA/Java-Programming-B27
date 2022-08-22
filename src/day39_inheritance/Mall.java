@@ -17,7 +17,7 @@ public class Mall {
         pizza3.setSize("large");
         System.out.println(pizza3.getSize());
 
-        Pizza[] pizzas = {pizza1, pizza2, pizza3};
+        Pizza[] pizzas = {pizza1, pizza2, pizza3}; // ArrayList<Pizza>
 
         for(Pizza each : pizzas){
             System.out.println(each.getSize());
