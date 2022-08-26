@@ -8,7 +8,11 @@ public class Phone {
         System.out.println(youtube.version);
         youtube.download();
         youtube.watchVideo();
-
+        System.out.println(youtube);
 
     }
 }
+
+// Youtube is a App
+// App is a Object
+// Youtube is a Object
