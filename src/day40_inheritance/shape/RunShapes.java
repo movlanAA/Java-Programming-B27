@@ -9,5 +9,9 @@ public class RunShapes {
         System.out.println(circle.area());
         System.out.println(circle.perimeter());
 
+        System.out.println();
+        Square square = new Square(5.5);
+        System.out.println(square);
+
     }
 }
