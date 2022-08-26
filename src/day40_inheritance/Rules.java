@@ -37,3 +37,4 @@ class D extends A {
         return new D();
     }
 }
+
