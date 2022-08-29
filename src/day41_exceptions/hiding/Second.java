@@ -7,7 +7,7 @@ public class Second extends First {
     }
 
     public void instanceMethodB(){
-        staticMethod();
+        staticMethod();// calls the closest method, which is line 5 method in this class
     }
 
 }

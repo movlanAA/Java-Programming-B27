@@ -7,6 +7,6 @@ public class First {
     }
 
     public void instanceMethodA(){
-        staticMethod();
+        staticMethod(); // calls the closest method, which is line 5 method in this class
     }
 }
