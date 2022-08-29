@@ -16,7 +16,7 @@ public class FirstTry {
         System.out.println("Hello");
 
         try{
-            Thread.sleep(5000);
+            Thread.sleep(5000); // 5000 means 5 seconds, the parameter is milliseconds
         }catch (Exception e){
             System.out.println("Invalid time given");
         }
