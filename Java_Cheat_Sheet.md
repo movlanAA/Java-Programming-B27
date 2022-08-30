@@ -3,7 +3,7 @@
 
 ---
 ### This document will highlight the main points of the topics we cover.
-#### Last updated: 08/09/2022
+#### Last updated: 08/30/2022
 
 ## Table of Contents:
 
@@ -1107,17 +1107,446 @@ Note: We will talk about lamdba and how these methods were working towards the e
 ```
 ---
 
+# Custom Classes
 
+### What is a class
 
+	a template/blueprint for objects.
+	allows you to define information(variables) & actions(methods)
+	-> both are instance members
 
+### What is an object
 
+	instance of a class, it has a copy of all the information and actions defined from the class
 
+#### How to create an object
 
+	ClassName varName = new ClassName();
 
+	Note: left side of equal sign is the reference
+		  right side of the equal sign is the object
 
+	instantiation: creates an object	  
 
+#### What is an instance variable
 
+	variable defined in a class
+	every object has a copy of these variables
 
+#### How to print objects
+
+	we cannot print directly because it will show some hashcode
+
+	the toString method from the object class is inherited and this method is called when printing objects. If you want to change how the object is printed you must override the method. [See inheritance sections for more clarification ]
+
+syntax:
+```
+public String toString(){
+    return "information you to print"
+}
+```
+### Constructor
+
+	a special method that is called when an object is created
+	it it called with the new operator
+	the constructor is used mainly to initialize our instance variables
+
+	the constructor should be the same as the class name and have no return type(no void either)
+
+	if we don't create a constructor the compile will create a default constructor, which is a no argument constructor
+		-> if you create a constructor, the default one is no longer there
+
+	- We can define parameters if we need
+```
+Ex:
+
+Zoom.java
+    public class Zoom{
+        public Zoom(){
+        }
+    }
+```
+#### this
+java prioritizes local variables over instance variables
+
+		if you have a local variable and an instance variable with the same name. The local variable will be the one used
+
+	this keyword: acts as a reference to the object
+	so it will normally be used to tell the compiler the difference between a local variable and an instance variable
+
+	Ex:
+
+		public class A{
+			String str;
+			public A(String str){
+				this.str = str; // this line will assign the argument as the value to the instance variable for that object. Without the this keyword, the local str from the parameter would be assigning to itself, doesn't change the instance variable
+			}
+		}
+
+#### this vs this()
+
+	this: reference to the instance of a class
+	this(): call a constructor	
+
+#### Constructors can be overloaded
+
+	constructor chaining: one constructor calling another constructor -> we don't have to repeat ourselves 
+	
+	using this() and passing the argument needed to call a specific constructor 
+
+	- reduces repetition
+
+	rules:
+		the constructor call should be the first line
+		cannot use the class name className(), you need to this()
+		only call one constructor
+		should not call itself or contain itself
+
+### Static
+
+	keyword that allows us to define members that belong to the class
+		-> opposite of instance which are members that belong to the objec
+
+#### instance vs static
+
+	instance: members that belong to the objects
+		access from the object
+		every object has a copy of every instance members
+
+	static: members that belong to the class
+		access from the class name
+		every static member has a single copy
+
+		static variable: variable that had one copy belonging to the class
+			-> part of constant (will come back to this later)
+
+		static methods: methods that has on copy belonging to the class
+			-> methods that are accessed quickly
+			-> utility method
+
+		static block: a block of code that is written in the class. This code block is executed once in the beginning when the class is loaded into the memory for the first time
+			-> used to set up variables, calls methods
+
+		static import: allows you to access one specific static member without giving the class name
+
+			syntax:
+				import static packageName.className.staticMember;
+					or
+				import static packageName.className.*;  
+					wildcard allows you to access all static members in that file
+
+---
+
+### Access Modifiers
+
+	keyword that define the visibility or scope
+	(where you can use/access variables and methods)
+
+	-> local variables DO NOT have access modifiers
+
+	-> variables, methods, constructors can have any access modifier
+	-> classes public or default (main classes)
+
+	[Most Visible] public -> protected -> default -> private [Least Visible]
+
+	public: accessible everywhere in the project
+
+	default: accessible within the same package
+		-> when there is no other access modifier
+
+	private: accessible within the same class
+
+	protected: accessible by the classes of the same packages and the subclasses present in any package
+
+---
+
+## OOP
+
+	Object Oriented Programming
+
+	OOP concepts:
+	Encapsulation
+	Inheritance
+	Abstraction
+	Polymorphism
+
+--- 
+
+### Encapsulation:
+
+	allows us to hide information from direct access.
+	We limit the access to the variables by making the variable private and created public getter and setter methods
+
+	getter: method that is used to get/return value of that variable
+
+	setter: method that change/reassign the values of a variable
+
+---
+
+### Inheritance
+
+	allows us to pass information/inherit from one class to another
+		+ gives us code re-usability and code maintainability
+		+ good organization, allow us to set up ideas, connect classes with similar ideas
+
+	The Object class is the parent of all classes automatically
+
+#### How to inherit in java
+
+	use extends keyword in the class declaration
+
+	syntax: Child extends Parent
+
+		-> Parent class passes information to the Child class
+
+	ex:
+
+		public class Planet{
+			int distanceFromTheSun;
+		}	
+
+		public class Earth extends Planet{
+		}
+
+#### Relationship between classes
+use 'is a' relation to describe how classes are connected
+
+		child is a parent
+
+		Ex: Earth is a Planet
+
+#### Describe classes in inheritance
+
+	parent == super == base
+	child == sub == derived
+
+#### What is inherited:
+
+	all public variables & methods
+	all protected variables & methods
+	default variables & method that are IN THE SAME PACKAGE
+
+#### What is not inherited:
+
+	all private variables & methods
+	default variables & methods that are NOT IN THE SAME PACKAGE
+	constructors
+
+#### How many parents can we have
+
+	in java you can only only one direct parent
+	java does not allow multi-inheritance (multiple parents at the same)
+
+	ex: you cannot do this:
+		class A extends B, C
+
+#### this vs super
+
+	this: reference to the current class object
+	super: reference to the super class object
+
+#### this() vs super()
+
+	this(): calling a constructor in current class
+	super(): calling a constructor in the parent class
+
+#### constructors in inheritance
+
+	constructors do not inherit
+	but, in order to create object the super class constructors must be called
+	we need to use super() call
+
+#### Types of Inheritance
+
+	single inheritance
+
+		class Planet{
+		}
+
+		class Mars extends Planet{
+		}
+
+	Multi level
+
+		class Animal {
+		}
+
+		class Dog extends Animal{
+		}
+
+		class Husky extends Dog {
+		}
+
+	Hierarchical
+
+		class Book {
+		}
+
+		class AudioBook extends Book {
+		}
+
+		class EBook extends Book {
+		}
+
+		class TextBook extends Book{
+		}
+
+### Method Overriding
+
+	change the implementation(code) of a method that is inherited from a super class
+		-> another way to phrase it: after inheriting a method we can change how it works
+
+	use of overriding: create method implementation that is more specific for the sub class
+
+#### @Override
+
+	annotation that helps make sure you override the method correctly
+	using the annotation is optional, but recommended to use
+
+#### Q: What is the difference between overloading and overriding
+
+	overloading: having the same method name, but having different parameters
+		-> this happens in the same file
+
+	overriding: changing the implementation of a method that came from the super class
+		-> this happens across multiple files (super & sub)
+
+#### Method Overriding rules
+
+	method needs to be inherits
+	method signature should be the same
+		method signature: name + parameters
+	access modifier should be the same or more visible
+
+		public > protected > default > private
+
+	return type should be same 
+		or covariant: sub class of that return type
+
+	overriding is only for instance methods
+
+---
+
+#### final
+
+	final variable: variable that cannot be reassigned, cannot be changed
+
+		- constants: information/data that are fixed and accessible everywhere
+			syntax: public static final variables
+
+			Note: convention for creating constant variables: constant variables are created in all uppercase . underscore for spaces
+
+	final method: method that cannot be overridden -> cannot change the implementation of the method
+		sytnax: public final void method(){}
+
+	final class: this class cannot be the parent of another class. 
+		syntax: public final class name {}
+---
+
+#### Q: Can you override static methods
+
+	NO, they can't be and overriding is for instance methods to make them more specific for its sub class object
+
+	But if you declare a static method in the sub class that has the same name as the the method inherited you will do method hiding
+		-> both exist
+
+#### Method overriding vs method hiding:
+
+	instance methods: can be overridden, we can change how the method works in the sub class
+
+	static methods: it will look like we are overriding but the idea is different
+
+		When you try to make a method with the same name and parameters it is doing method hiding
+		It means you are creating a new method with the same name, in the sub class
+		Because these are static you have access to both static methods with the same name, because each is accessible by their class
+---
+
+## Exceptions
+
+#### What is an error
+
+	stops the execution, but it caused by factors outside of the side
+	so, we don't handle them
+
+#### What is an exception
+
+	stops the normal flow of execution because of some code
+	we will handle these
+
+#### Inheritance of Exceptions
+
+	Throwable
+		Exception -> checked exceptions
+			RuntimeException -> unchecked exceptions
+
+#### Exceptions are objects
+
+	common methods of the objects:
+    	getMessage():	returns a String of the message component of the exception
+    	printStackTrace():	prints the details about the exception to the console
+
+#### Types of exceptions:
+
+	checked/ compile time
+
+		these exceptions MUST be handled for the program to compile
+
+		Ex: Thread.sleep()
+			Note: this method accepts the millisecond argument to pause the execution for that time
+
+	unchecked/ run time
+
+		an exception that could occur and when it does it happens during execution. 
+		You can handle or fix the code
+
+		Ex: StringIndexOutOfBounds, NullPointerException
+
+#### How to handle exceptions
+
+	try/catch block 
+
+	you are able to run code in the try block
+	and then we are able to define possible exceptions that could happen in the catch block
+		-> if the exception occurs the catch block will handle it by running whatever code was defined in the catch block
+
+		catch block: 
+			when we set up a catch block we are defining the type of exception that will be thrown so we create a reference of that object using
+
+			(exception name)
+
+				Note: 'e' is commonly used as the name
+				this part acts like a parameter for that block
+			
+			Ex: catch(NullPointerException e)
+
+    finally block:
+
+        its optional to add to try/catch
+        this code block will run no matter, if there is an exception or not
+
+#### throw vs throws
+
+    throws: keyword that allows you to ignore an exception
+
+        this is NOT handling the exception, but it allows you to compile 
+
+        -> if you use throws you are accepting that an exception can happen
+
+        used in the method signature line
+        syntax:
+        	method() throws Exception {}
+
+        Ex:
+        	public static void main(String[] args) throws InterruptedException{ }
+
+    throw: causes an exception to happen, must throw an Exception type object
+    	syntax:
+    		throw new ExceptionObject();
+
+        Ex: 
+        	throw new IllegalArgumentException();
+
+---
 
 
 
