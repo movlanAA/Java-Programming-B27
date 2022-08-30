@@ -37,7 +37,17 @@
 
 [ArrayList](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#arraylist)
 
+[Custom Classes](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#custom-classes)
 
+[Access Modifiers](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#access-modifiers)
+
+[Encapsulation](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#access-modifiers)
+
+[Inheritance](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#inheritance)
+
+[Method Overriding](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#inheritance)
+
+[Exceptions](https://github.com/Cydeo-B27/Java-Programming-B27/blob/master/Java_Cheat_Sheet.md#exceptions)
 
 ---
 ## Shortcuts
