@@ -14,6 +14,6 @@ public final class Tester extends Employee{
 
     @Override
     public void sleep(int hours) {
-        System.out.println( name + " sleeps for " + hours + " while the automation code runs");
+        System.out.println( name + " sleeps for " + hours + " hours while the automation code runs");
     }
 }
