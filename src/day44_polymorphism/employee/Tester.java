@@ -1,6 +1,6 @@
 package day44_polymorphism.employee;
 
-public final class Tester extends Employee{
+public final class Tester extends Employee implements CreateSmokeTest{
 
     public Tester(String name, String jobTitle, double salary) {
         super(name, jobTitle, salary);
@@ -9,6 +9,11 @@ public final class Tester extends Employee{
     @Override
     public void work() {
         System.out.println("running test cases");
+    }
+
+    @Override
+    public void create() {
+        System.out.println("Creating automatic smoke test");
     }
 
     public void writeBugReport(){
