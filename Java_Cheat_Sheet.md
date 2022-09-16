@@ -3,7 +3,7 @@
 
 ---
 ### This document will highlight the main points of the topics we cover.
-#### Last updated: 08/30/2022
+#### Last updated: 09/16/2022
 
 ## Table of Contents:
 
@@ -1558,6 +1558,119 @@ use 'is a' relation to describe how classes are connected
 
 ---
 
+## Abstraction:
+
+	process that hides implementation. We can focus on the main idea of WHAT is function(action, but not worry about HOW its done (implementation)
+
+	implementation: the function of the code, how the code actually is used
+
+	concrete class: first non-abstract class (normal class). This class must implement all abstract that are inherited
+
+#### in java there is two ways to achieved abstraction
+
+	abstract class
+	interface
+
+#### abstract methods
+
+	a method without any implementation (a method with no code body)
+
+	ex:
+
+		public abstract void rotate();
+
+		-> where/ how is this method used?
+
+			in the sub classes/concrete classes this method would be overridden and then it can be used by the sub class object
+
+#### abstract class
+    a class that is defined with the abstract keyword
+
+	ex: public abstract class Planet {
+
+		}
+
+		-> the abstract class is able to define abstract methods
+		-> you cannot instantiate this class (cannot create objects from this class)
+
+	everything else about the classes is the same
+
+#### Interface
+
+	interface is NOT a class. An interface is a blueprint for a class
+
+	it is possible so create abstract methods
+	you cannot create an object of the interface
+
+	implementing an interface creates an is a relation
+
+	so how do you create an interface
+		it is in the .java file
+
+		public interface NAME  {
+
+		}
+		where the NAME is the name of the interface
+
+	everything uses public access modifier automatically	
+
+	methods: any method declared is public abstract automatically
+
+	variables: any variable declares is public static final automatically 
+		-> constant variables are static final
+		-> interface do not have any instance variables
+
+#### What does an interface have
+
+	constant variables, abstract methods, static methods, default methods
+
+#### What does an interface NOT have
+
+	instance variables, instance methods, constructor, blocks of code
+
+#### Methods with implementation in interface:
+
+	static: a method with code body and it is accessed by the interface name
+
+		-> these methods are not inherited
+
+		static level at the interface
+
+	default: a method with a code body and it is accessed by the object of the class that is implementing the interface
+
+		instance level for the class that implements
+
+		-> this is not the default access modifier. It is a keyword for these methods. Default methods are created only in interface
+
+---
+
+## Polymorphism
+
+	the object taking different forms by the reference
+
+#### What are the possible references
+
+	itself: the reference is the same type as the object
+
+	any super class: any direct or indirect super class can be a reference
+
+	any implemented interface
+
+#### Benefit of polymorphism
+
+	To limit what you have to access, only so you interact with the most important components
+
+	the other references(especially the interface reference), allow us to be more flexible with other code components
+
+	polymorphic data structures (ex: arrays) store different objects are the still somewhat similar
+
+	with methods: the parameter and returns can be super reference or interface reference which means that method is flexible
+
+#### instanceOf
+
+	keyword that can find the type of the object
+
+---
 
 
 
