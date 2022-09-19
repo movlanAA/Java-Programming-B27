@@ -41,7 +41,15 @@ public class BuildingMarket {
         }
         System.out.println(mostExpensive);
 
+//        mostExpensive.numberOfFloors; // this does not compile because the reference is Building, but Building does not have visibility to the variable
 
+        System.out.println(((OfficeBuilding)mostExpensive).numberOfFloors);// reference of Building --> reference OfficeBuilding
+
+        //  Filter all the Buildings within a certain price range
+        ArrayList<Building> filteredBuildings = new ArrayList<>(allBuildings);
+
+        filteredBuildings.removeIf(p -> p.price >= 2_000_000 || p.price <= 300_000);
+        System.out.println(filteredBuildings);
 
     }
 
