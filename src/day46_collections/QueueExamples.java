@@ -1,8 +1,6 @@
 package day46_collections;
 
-import java.util.ArrayDeque;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 public class QueueExamples {
     public static void main(String[] args) {
@@ -49,6 +47,10 @@ public class QueueExamples {
 
 //        new ArrayDeque<>().remove(); // causes exception
 //        new ArrayDeque<>().poll(); // returns null, but no exception
+
+        List<Integer> list = new LinkedList<>();
+        ((Deque)list).addFirst(4);
+
 
     }
 }
