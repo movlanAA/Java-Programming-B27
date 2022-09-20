@@ -1,9 +1,6 @@
 package day46_collections;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class ReadFromSet {
     public static void main(String[] args) {
@@ -46,9 +43,11 @@ public class ReadFromSet {
         System.out.println(list);
         System.out.println(list.get(0));
 
-        String s = "";
-
-
+        // Remove duplicate occurrences of each character
+        String s = "AAAABBBBCCCCDDDD";
+        System.out.println(new LinkedHashSet<>( Arrays.asList(s.split("")))
+                .toString().replace(", ", "").replace("[", "").replace("]", "")
+        );
 
 
     }
