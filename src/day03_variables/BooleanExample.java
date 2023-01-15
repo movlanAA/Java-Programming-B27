@@ -14,4 +14,7 @@ public class BooleanExample {
         int Public = 40; // valid name, because public not equal to Public
 
     }
+
+
+
 }

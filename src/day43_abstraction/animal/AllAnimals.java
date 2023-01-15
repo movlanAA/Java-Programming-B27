@@ -16,25 +16,11 @@ class Cat extends Animal implements Friendly{
     }
 
     @Override
-    public void pet() {
-
+    public String toString() {
+        return "Cat{}";
     }
 
-    @Override
-    public void play() {
-
-    }
-}
-
-class Dog extends Animal implements Friendly, Swimable{
-    @Override
-    public void eat() {
-
-    }
-
-    @Override
-    public void sleep() {
-
+    public Cat() {
     }
 
     @Override
@@ -46,12 +32,8 @@ class Dog extends Animal implements Friendly, Swimable{
     public void play() {
 
     }
-
-    @Override
-    public void swim() {
-
-    }
 }
+
 class Tiger extends Animal implements Swimable {
     @Override
     public void eat() {
